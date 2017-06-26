@@ -55,6 +55,9 @@ dependencies {
     // composants de MaterialDesign https://github.com/navasmdc/MaterialDesignLibrary
     compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
 
+    // composants de Markushi bouton rond https://github.com/markushi/android-circlebutton
+    compile 'com.github.markushi:circlebutton:1.1'
+
     //from wasabeef : ToxicBakery/ViewPagerTransforms
     compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
 
