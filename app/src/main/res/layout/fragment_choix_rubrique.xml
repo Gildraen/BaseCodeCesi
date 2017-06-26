@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.cesi.base.ui.orthographe.ChoixRubriqueFragment"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bgmots">
+
+
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/choixtheme"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin_button"
+            android:background="@color/colorPrimary"
+            android:text="@string/maison" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button2"
+            android:layout_marginBottom="@dimen/default_margin_button"
+            android:background="@color/colorPrimary"
+            android:text="@string/famille"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:layout_marginBottom="@dimen/default_margin_button"
+            android:background="@color/colorPrimary"
+            android:text="@string/corpshumain"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:layout_marginBottom="@dimen/default_margin_button"
+            android:background="@color/colorPrimary"
+            android:text="@string/couleurs"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button5"
+            android:layout_marginBottom="@dimen/default_margin_button"
+            android:background="@color/colorPrimary"
+            android:text="@string/animaux"/>
+    </LinearLayout>
+</LinearLayout>

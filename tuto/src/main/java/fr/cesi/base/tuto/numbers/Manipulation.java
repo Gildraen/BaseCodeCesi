@@ -13,6 +13,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 public class Manipulation extends AbstractExercise {
 
     private boolean isEven(float number) {
+        return number % 2 == 0;
         throw new NoSuchMethodError();
     }
 
