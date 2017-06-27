@@ -21,47 +21,53 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/choixtheme"
-            android:layout_marginBottom="50dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"/>
 
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:background="@color/colorPrimary"
-            android:text="@string/maison" />
+            android:background="@drawable/etiquette"
+            android:text="@string/maison"
+            android:textColor="@color/colorTextButton"/>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/button2"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:background="@color/colorPrimary"
-            android:text="@string/famille"/>
+            android:background="@drawable/etiquette"
+            android:text="@string/famille"
+            android:textColor="@color/colorTextButton"/>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/button3"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:background="@color/colorPrimary"
-            android:text="@string/corpshumain"/>
+            android:background="@drawable/etiquette"
+            android:text="@string/corpshumain"
+            android:textColor="@color/colorTextButton"/>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/button4"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:background="@color/colorPrimary"
-            android:text="@string/couleurs"/>
+            android:background="@drawable/etiquette"
+            android:text="@string/couleurs"
+            android:textColor="@color/colorTextButton"/>
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:id="@+id/button5"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:background="@color/colorPrimary"
-            android:text="@string/animaux"/>
+            android:background="@drawable/etiquette"
+            android:text="@string/animaux"
+            android:textColor="@color/colorTextButton"/>
     </LinearLayout>
 </LinearLayout>
