@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -27,24 +28,24 @@ import fr.cesi.basecode.R;
  */
 public class ChoixRubriqueFragment extends Fragment implements IPopableFragment {
     
-    @BindView(R.id.button1)
-    Button _button1;
+    @BindView(R.id.maison)
+    FrameLayout _maison;
 
-    @BindView(R.id.button2)
-    Button _button2;
+    @BindView(R.id.famille)
+    FrameLayout _famille;
 
-    @BindView(R.id.button3)
-    Button _button3;
+    @BindView(R.id.corpshumain)
+    FrameLayout _corpshumain;
 
-    @BindView(R.id.button4)
-    Button _button4;
+    @BindView(R.id.couleurs)
+    FrameLayout _couleurs;
 
-    @BindView(R.id.button5)
-    Button _button5;
+    @BindView(R.id.animaux)
+    FrameLayout _animaux;
 
-    @OnClick(R.id.button1)
+    @OnClick(R.id.maison)
     void onChooseThemeFamily(){
-        ((OrthographeActivity)getActivity()).showFamilyFragment(Theme.Famille);
+        ((OrthographeActivity)getActivity()).showFamilyFragment(Theme.Maison);
     }
 
     public ChoixRubriqueFragment() {

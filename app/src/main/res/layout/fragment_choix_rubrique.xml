@@ -28,7 +28,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button1">
+            android:id="@+id/maison">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -39,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/maison"
+                android:paddingTop="5dp"
                 android:textSize="@dimen/textsize"
                 android:textColor="@color/colorTextButton"/>
         </FrameLayout>
@@ -49,7 +50,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button2">
+            android:id="@+id/famille">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -60,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/famille"
+                android:paddingTop="5dp"
                 android:textSize="@dimen/textsize"
                 android:textColor="@color/colorTextButton"/>
         </FrameLayout>
@@ -70,7 +72,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button3">
+            android:id="@+id/corpshumain">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -81,6 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/corpshumain"
+                android:paddingTop="5dp"
                 android:textSize="@dimen/textsize"
                 android:textColor="@color/colorTextButton"/>
         </FrameLayout>
@@ -91,7 +94,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button4">
+            android:id="@+id/couleurs">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -102,6 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/couleurs"
+                android:paddingTop="5dp"
                 android:textSize="@dimen/textsize"
                 android:textColor="@color/colorTextButton"/>
         </FrameLayout>
@@ -112,7 +116,7 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button5">
+            android:id="@+id/animaux">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
@@ -123,6 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/animaux"
+                android:paddingTop="5dp"
                 android:textSize="@dimen/textsize"
                 android:textColor="@color/colorTextButton"/>
         </FrameLayout>
