@@ -11,4 +11,7 @@
     <string name="animaux">Animaux</string>
     <string name="choixtheme">Choisis un thème à explorer :</string>
     <string name="correction">Réécris le mot ici</string>
+    <string name="ignorer">Je passe</string>
+    <string name="vrai">Vrai</string>
+    <string name="faux">Faux</string>
 </resources>
