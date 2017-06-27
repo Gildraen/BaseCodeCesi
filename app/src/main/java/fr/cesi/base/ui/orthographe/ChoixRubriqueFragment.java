@@ -9,8 +9,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import fr.cesi.base.controllers.fragment.IPopableFragment;
 import fr.cesi.basecode.R;
 
@@ -22,16 +26,26 @@ import fr.cesi.basecode.R;
  * create an instance of this fragment.
  */
 public class ChoixRubriqueFragment extends Fragment implements IPopableFragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    
+    @BindView(R.id.button1)
+    Button _button1;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    @BindView(R.id.button2)
+    Button _button2;
 
+    @BindView(R.id.button3)
+    Button _button3;
 
+    @BindView(R.id.button4)
+    Button _button4;
+
+    @BindView(R.id.button5)
+    Button _button5;
+
+    @OnClick(R.id.button1)
+    void onChooseThemeFamily(){
+        ((OrthographeActivity)getActivity()).showFamilyFragment(Theme.Famille);
+    }
 
     public ChoixRubriqueFragment() {
         // Required empty public constructor
@@ -42,31 +56,14 @@ public class ChoixRubriqueFragment extends Fragment implements IPopableFragment 
         return fragment;
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ChoixRubriqueFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static ChoixRubriqueFragment newInstance(String param1, String param2) {
         ChoixRubriqueFragment fragment = new ChoixRubriqueFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -79,6 +76,9 @@ public class ChoixRubriqueFragment extends Fragment implements IPopableFragment 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
+        ButterKnife.bind(this, view);
 
     }
 
