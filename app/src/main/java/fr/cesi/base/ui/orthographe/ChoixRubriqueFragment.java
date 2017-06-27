@@ -77,6 +77,7 @@ public class ChoixRubriqueFragment extends Fragment implements IPopableFragment 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         ButterKnife.bind(this, view);
 
     }
@@ -84,6 +85,7 @@ public class ChoixRubriqueFragment extends Fragment implements IPopableFragment 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
 
     }
 

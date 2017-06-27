@@ -4,6 +4,10 @@ import org.junit.Assert;
 
 import fr.cesi.base.tuto.abstracts.AbstractExercise;
 
+//import sun.jvm.hotspot.jdi.NonConcreteMethodImpl;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+
 /**
  * Dans cette exercice, il faut définir le contenu des méthodes pour
  * tester la parité ou non d'un nombre donné
