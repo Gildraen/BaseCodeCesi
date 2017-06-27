@@ -31,7 +31,7 @@ public class ChoixRubriqueFragment extends Fragment implements IPopableFragment 
     private String mParam1;
     private String mParam2;
 
-    private TextView _my_textview;
+
 
     public ChoixRubriqueFragment() {
         // Required empty public constructor
@@ -80,15 +80,13 @@ public class ChoixRubriqueFragment extends Fragment implements IPopableFragment 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        _my_textview = (TextView) view.findViewById(R.id.button1);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        Typeface face=Typeface.createFromAsset(getActivity().getAssets(),"fonts/ec.ttf");
-        _my_textview.setTypeface(face);
+
     }
 
 
