@@ -2,72 +2,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fr.cesi.base.ui.orthographe.ChoixRubriqueFragment"
+    android:background="@drawable/bgmots"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/bgmots">
-
-
+    tools:context="fr.cesi.base.ui.orthographe.ChoixRubriqueFragment">
 
 
     <LinearLayout
+        android:layout_width="200dp"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"
-        android:layout_width="200dp"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <TextView
+            fontPath="fonts/ec.ttf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/choixtheme"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
-            android:textSize="14dp"/>
+            android:text="@string/choixtheme"
+            android:textSize="14dp" />
 
         <Button
             android:id="@+id/button1"
+            fontPath="fonts/ec.ttf"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
             android:text="@string/maison"
-            android:textColor="@color/colorTextButton"/>
+            android:textColor="@color/colorTextButton" />
 
         <Button
+            android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/button2"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
             android:text="@string/famille"
-            android:textColor="@color/colorTextButton"/>
+            android:textColor="@color/colorTextButton" />
 
         <Button
+            android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/button3"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
             android:text="@string/corpshumain"
-            android:textColor="@color/colorTextButton"/>
+            android:textColor="@color/colorTextButton" />
 
         <Button
+            android:id="@+id/button4"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/button4"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
             android:text="@string/couleurs"
-            android:textColor="@color/colorTextButton"/>
+            android:textColor="@color/colorTextButton" />
 
         <Button
+            android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:id="@+id/button5"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
             android:text="@string/animaux"
-            android:textColor="@color/colorTextButton"/>
+            android:textColor="@color/colorTextButton" />
     </LinearLayout>
 </LinearLayout>

@@ -76,4 +76,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.github.Raizlabs.DBFlow:dbflow-processor:4.0.4'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+
+    // Calligraphy, font library for custom font
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+
 }
