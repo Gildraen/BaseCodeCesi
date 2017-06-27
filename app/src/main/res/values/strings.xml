@@ -10,4 +10,5 @@
     <string name="couleurs">Couleurs</string>
     <string name="animaux">Animaux</string>
     <string name="choixtheme">Choisis un thème à explorer :</string>
+    <string name="correction">Réécris le mot ici</string>
 </resources>
