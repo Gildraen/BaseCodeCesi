@@ -42,14 +42,16 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/ellipsevrai"
-                android:text="@string/vrai"/>
+                android:text="@string/vrai"
+                android:textColor="@color/colorTextButton"/>
 
             <Button
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/ellipsefaux"
-                android:text="@string/faux"/>
+                android:text="@string/faux"
+                android:textColor="@color/colorTextButton"/>
 
         </LinearLayout>
 
