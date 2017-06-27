@@ -8,6 +8,8 @@
     <color name="colorSecondary_text">@color/secondary_text</color>
     <color name="colorIcons">@color/icons</color>
     <color name="colorDivider">@color/divider</color>
+    <color name="colorTextButton">@color/text_button</color>
+
 
     <color name="primary">#2196F3</color>
     <color name="primary_dark">#1976D2</color>
@@ -17,4 +19,5 @@
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
+    <color name="text_button">#ffffff</color>
 </resources>
