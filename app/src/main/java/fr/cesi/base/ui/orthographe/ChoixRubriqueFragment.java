@@ -44,9 +44,32 @@ public class ChoixRubriqueFragment extends Fragment implements IPopableFragment 
     FrameLayout _animaux;
 
     @OnClick(R.id.maison)
-    void onChooseThemeFamily(){
+    void onChooseThemeMaison(){
         ((OrthographeActivity)getActivity()).showFamilyFragment(Theme.Maison);
     }
+
+    @OnClick(R.id.famille)
+    void onChooseThemeFamille(){
+        ((OrthographeActivity)getActivity()).showFamilyFragment(Theme.Famille);
+    }
+
+    @OnClick(R.id.corpshumain)
+    void onChooseThemeCorpshumain(){
+        ((OrthographeActivity)getActivity()).showFamilyFragment(Theme.CorpsHumain);
+    }
+
+    @OnClick(R.id.couleurs)
+    void onChooseThemeCouleurs(){
+        ((OrthographeActivity)getActivity()).showFamilyFragment(Theme.Couleurs);
+    }
+
+    @OnClick(R.id.animaux)
+    void onChooseThemeAnimaux(){
+        ((OrthographeActivity)getActivity()).showFamilyFragment(Theme.Animaux);
+    }
+
+
+
 
     public ChoixRubriqueFragment() {
         // Required empty public constructor

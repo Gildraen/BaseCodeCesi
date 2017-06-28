@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.raizlabs.android.dbflow.config.FlowManager;
 
@@ -27,18 +28,22 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class OrthographeActivity extends AbstractPopableActivity implements IActivityListener {
 
     private static final String TAG = OrthographeActivity.class.getSimpleName();
+    private Word _current_word;
+    Theme _currenttheme;
 
     @BindView(R.id.main_content)
     LinearLayout _main_content;
+    private List<Word> _currentListToLoad;
+    private String _current_word_chosen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_orthographe);
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                        .setDefaultFontPath("fonts/ec.ttf")
-                        .setFontAttrId(R.attr.fontPath)
-                        .build()
+                .setDefaultFontPath("fonts/ec.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
         );
 
         //init the database manager
@@ -53,12 +58,11 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
     protected void onResume() {
         super.onResume();
 
+
         IPopableFragment current_stack_head = getStackController().head();
         if (current_stack_head == null) {
-            TestMotFragment fragment = TestMotFragment.newInstance();
-            getStackController().push(fragment);
+            showMainMenu();
         }
-
     }
 
     @Override
@@ -72,10 +76,45 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
     }
 
     public void showFamilyFragment(Theme theme) {
-        //getStackController().push(ShowWord.newInstance(oeirieurty))
-        List<Word> list_to_load = WordController.getInstance().listFromTheme(theme);
-        Log.d(TAG, "showFamilyFragment: list_to_load size := "+list_to_load.size() + " for " + theme);
+        _currenttheme = theme;
+        _currentListToLoad = WordController.getInstance().listFromTheme(_currenttheme);
+
+        startGameWithTest();
+    }
+
+    public void showMainMenu() {
+        ChoixRubriqueFragment fragment = ChoixRubriqueFragment.newInstance();
+        getStackController().push(fragment);
     }
 
 
+    public void startGameWithTest() {
+        loadNextWord();
+
+        if (_current_word == null) {
+            //fini
+            showMainMenu();
+        } else {
+            //show test
+            getStackController().push(TestMotFragment.newInstance());
+            Log.d(TAG, "showFamilyFragment: list_to_load size := " + _currentListToLoad.size() + " for " + _currenttheme);
+        }
+    }
+
+    public Theme getCurrentTheme() {
+        return _currenttheme;
+    }
+
+    public void loadNextWord() {
+        _current_word = WordController.getInstance().getRandomAndRemoveFromList(_currentListToLoad);
+        _current_word_chosen = _current_word.getRandomValue();
+    }
+
+    public Word getCurrentWord() {
+        return _current_word;
+    }
+
+    public String getCurrentWordChosen() {
+        return _current_word_chosen;
+    }
 }

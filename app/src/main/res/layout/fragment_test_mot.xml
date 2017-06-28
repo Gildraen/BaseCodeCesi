@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgtachesmot"
+    android:background="@drawable/bgviewtestmot"
     android:gravity="center"
     android:orientation="vertical"
     tools:context="fr.cesi.base.ui.orthographe.TestMotFragment">
@@ -15,15 +15,17 @@
         android:orientation="vertical">
 
 
-        <Button
-            android:id="@+id/button1"
+        <TextView
+            android:id="@+id/theme"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
-            android:textColor="@color/colorTextButton" />
+            android:textColor="@color/colorTextButton"
+            tools:text="Mot à corriger"/>
 
         <TextView
+            android:id="@+id/testword"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginBottom="@dimen/default_margin_button"

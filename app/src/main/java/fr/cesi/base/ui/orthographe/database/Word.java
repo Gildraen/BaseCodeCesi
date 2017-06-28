@@ -43,4 +43,15 @@ public class Word extends BaseModel {
         this.false3 = false3;
         this.theme = theme.toString();
     }
+
+    public String getRandomValue() {
+        int value = (int) Math.floor(Math.random()*4);
+
+        switch(value) {
+            case 1: return false1;
+            case 2: return false2;
+            case 3: return false3;
+        }
+        return correct;
+    }
 }
