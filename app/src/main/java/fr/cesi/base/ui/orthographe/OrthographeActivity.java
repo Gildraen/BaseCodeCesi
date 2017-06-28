@@ -55,7 +55,7 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
 
         IPopableFragment current_stack_head = getStackController().head();
         if (current_stack_head == null) {
-            ChoixRubriqueFragment fragment = ChoixRubriqueFragment.newInstance();
+            TestMotFragment fragment = TestMotFragment.newInstance();
             getStackController().push(fragment);
         }
 
