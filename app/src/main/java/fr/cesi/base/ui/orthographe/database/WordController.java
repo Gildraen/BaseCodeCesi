@@ -1,5 +1,7 @@
 package fr.cesi.base.ui.orthographe.database;
 
+import android.util.Log;
+
 import com.raizlabs.android.dbflow.sql.language.Select;
 import com.raizlabs.android.dbflow.sql.language.property.Property;
 import com.raizlabs.android.dbflow.structure.BaseModel;
@@ -8,6 +10,8 @@ import java.util.List;
 
 import fr.cesi.base.database.AbstractModelController;
 import fr.cesi.base.ui.orthographe.Theme;
+
+import static android.content.ContentValues.TAG;
 
 
 public class WordController extends AbstractModelController<Word> {
@@ -52,10 +56,16 @@ public class WordController extends AbstractModelController<Word> {
     }
 
     public Word getRandomAndRemoveFromList(List<Word> list) {
-        int index = (int) Math.floor(Math.random() * (list.size() + 1));
-        Word word = list.get(index);
-        list.remove(index);
-        return word;
+        if (list.size()>0) {
+
+            int index = (int) Math.floor(Math.random() * (list.size()));
+            Word word = list.get(index);
+            list.remove(index);
+            return word;
+        }
+        else {
+            return null;
+        }
     }
 
 

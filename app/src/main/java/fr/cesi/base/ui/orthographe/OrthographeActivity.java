@@ -79,7 +79,12 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
         _currenttheme = theme;
         _currentListToLoad = WordController.getInstance().listFromTheme(_currenttheme);
 
-        startGameWithTest();
+        startGameWithTest(true);
+    }
+
+    public void showCorrectionWord(boolean b) {
+        CorrectionMotFragment fragment = CorrectionMotFragment.newInstance();
+        getStackController().push(fragment);
     }
 
     public void showMainMenu() {
@@ -101,13 +106,28 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
         }
     }
 
+    public void startGameWithTest(boolean b) {
+        loadNextWord();
+
+        if (_current_word == null) {
+            //fini
+            showMainMenu();
+        } else {
+            //show test
+            getStackController().push(TestMotFragment.newInstance());
+            Log.d(TAG, "showFamilyFragment: list_to_load size := " + _currentListToLoad.size() + " for " + _currenttheme);
+        }
+    }
+
     public Theme getCurrentTheme() {
         return _currenttheme;
     }
 
     public void loadNextWord() {
         _current_word = WordController.getInstance().getRandomAndRemoveFromList(_currentListToLoad);
-        _current_word_chosen = _current_word.getRandomValue();
+        if (_current_word != null) {
+            _current_word_chosen = _current_word.getRandomValue();
+        }
     }
 
     public Word getCurrentWord() {

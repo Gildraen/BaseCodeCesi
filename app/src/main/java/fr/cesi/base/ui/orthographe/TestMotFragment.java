@@ -7,11 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import fr.cesi.base.controllers.fragment.IPopableFragment;
 import fr.cesi.base.ui.orthographe.database.Word;
 import fr.cesi.basecode.R;
@@ -28,6 +30,41 @@ public class TestMotFragment extends Fragment implements IPopableFragment {
 
     @BindView(R.id.testword)
     TextView _testword;
+
+    @BindView(R.id.correct)
+    Button _correct;
+
+    @BindView(R.id.incorrect)
+    Button _incorrect;
+
+    @BindView(R.id.passe)
+    Button _passe;
+
+    @OnClick(R.id.passe)
+    void getPassed() {
+        ((OrthographeActivity) getActivity()).startGameWithTest();
+    }
+
+    @OnClick(R.id.correct)
+    void getLinkCorrect() {
+
+        if (isWordCorrect()){
+            ((OrthographeActivity) getActivity()).startGameWithTest(true);
+        }
+        else {
+            ((OrthographeActivity) getActivity()).showCorrectionWord(false);
+        }
+    }
+
+    @OnClick(R.id.incorrect)
+    void getLinkIncorrect() {
+        if (isWordCorrect()){
+            ((OrthographeActivity) getActivity()).startGameWithTest(false);
+        }
+        else {
+            ((OrthographeActivity) getActivity()).showCorrectionWord(true);
+        }
+    }
 
     public TestMotFragment() {
         // Required empty public constructor
@@ -72,6 +109,16 @@ public class TestMotFragment extends Fragment implements IPopableFragment {
 
         _theme.setText(activity.getCurrentTheme().toString());
         _testword.setText(current_word_chosen);
+    }
+
+    public boolean isWordCorrect(){
+        OrthographeActivity activity = (OrthographeActivity) getActivity();
+        if ( activity.getCurrentWordChosen() == activity.getCurrentWord().correct) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     @Override

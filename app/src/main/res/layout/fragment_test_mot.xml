@@ -46,6 +46,7 @@
 
 
             <Button
+                android:id="@+id/correct"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="30dp"
@@ -57,6 +58,7 @@
                 android:textColor="@color/colorTextButton"/>
 
             <Button
+                android:id="@+id/incorrect"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginRight="30dp"
@@ -70,7 +72,7 @@
 
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/passe"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginBottom="@dimen/default_margin_button"
