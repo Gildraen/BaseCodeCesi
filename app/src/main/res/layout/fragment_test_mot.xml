@@ -18,17 +18,24 @@
         <TextView
             android:id="@+id/theme"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:paddingTop="5dp"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
             android:textColor="@color/colorTextButton"
+            android:textSize="@dimen/textsize"
             tools:text="Mot à corriger"/>
 
         <TextView
             android:id="@+id/testword"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:gravity="center"
+            android:paddingTop="10dp"
             android:layout_marginBottom="@dimen/default_margin_button"
+            android:textColor="@color/colorTextButton"
+            android:textSize="@dimen/textsize"
             android:background="@drawable/etiquettelarge" />
 
         <LinearLayout
@@ -46,6 +53,7 @@
                 android:background="@drawable/ellipsevrai"
                 android:text="@string/vrai"
                 android:textAllCaps="false"
+                android:textSize="@dimen/textsizebtn"
                 android:textColor="@color/colorTextButton"/>
 
             <Button
@@ -55,6 +63,7 @@
                 android:background="@drawable/ellipsefaux"
                 android:text="@string/faux"
                 android:textAllCaps="false"
+                android:textSize="@dimen/textsizebtn"
                 android:textColor="@color/colorTextButton"/>
 
         </LinearLayout>
@@ -63,10 +72,12 @@
         <Button
             android:id="@+id/button5"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
             android:text="@string/ignorer"
+            android:textSize="@dimen/textsize"
+            android:textAllCaps="false"
             android:textColor="@color/colorTextButton" />
 
     </LinearLayout>
