@@ -22,109 +22,119 @@
 
 
         <FrameLayout
-            android:clickable="true"
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
 
             android:layout_height="50dp"
-            android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button1">
+            android:clickable="true"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/etiquette" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/maison"
-                android:textSize="@dimen/textsize"
-                android:textColor="@color/colorTextButton"/>
+                android:textColor="@color/colorTextButton"
+                android:textSize="@dimen/textsize" />
         </FrameLayout>
 
         <FrameLayout
-            android:clickable="true"
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button2">
+            android:clickable="true"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/etiquette" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/famille"
-                android:textSize="@dimen/textsize"
-                android:textColor="@color/colorTextButton"/>
+                android:textColor="@color/colorTextButton"
+                android:textSize="@dimen/textsize" />
         </FrameLayout>
 
         <FrameLayout
-            android:clickable="true"
+            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button3">
+            android:clickable="true"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/etiquette" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/corpshumain"
-                android:textSize="@dimen/textsize"
-                android:textColor="@color/colorTextButton"/>
+                android:textColor="@color/colorTextButton"
+                android:textSize="@dimen/textsize" />
         </FrameLayout>
 
         <FrameLayout
-            android:clickable="true"
+            android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button4">
+            android:clickable="true"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/etiquette" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/couleurs"
-                android:textSize="@dimen/textsize"
-                android:textColor="@color/colorTextButton"/>
+                android:textColor="@color/colorTextButton"
+                android:textSize="@dimen/textsize" />
         </FrameLayout>
 
         <FrameLayout
-            android:clickable="true"
+            android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:gravity="center"
             android:layout_marginBottom="@dimen/default_margin_button"
-            android:id="@+id/button5">
+            android:clickable="true"
+            android:gravity="center">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/etiquette" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/animaux"
-                android:textSize="@dimen/textsize"
-                android:textColor="@color/colorTextButton"/>
+                android:textColor="@color/colorTextButton"
+                android:textSize="@dimen/textsize" />
         </FrameLayout>
 
     </LinearLayout>

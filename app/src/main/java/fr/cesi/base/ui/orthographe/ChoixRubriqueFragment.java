@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -28,19 +29,19 @@ import fr.cesi.basecode.R;
 public class ChoixRubriqueFragment extends Fragment implements IPopableFragment {
     
     @BindView(R.id.button1)
-    Button _button1;
+    FrameLayout _button1;
 
     @BindView(R.id.button2)
-    Button _button2;
+    FrameLayout _button2;
 
     @BindView(R.id.button3)
-    Button _button3;
+    FrameLayout _button3;
 
     @BindView(R.id.button4)
-    Button _button4;
+    FrameLayout _button4;
 
     @BindView(R.id.button5)
-    Button _button5;
+    FrameLayout _button5;
 
     @OnClick(R.id.button1)
     void onChooseThemeFamily(){
