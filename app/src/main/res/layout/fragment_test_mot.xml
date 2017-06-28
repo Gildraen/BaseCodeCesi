@@ -43,6 +43,7 @@
                 android:layout_marginRight="30dp"
                 android:background="@drawable/ellipsevrai"
                 android:text="@string/vrai"
+                android:textAllCaps="false"
                 android:textColor="@color/colorTextButton"/>
 
             <Button
@@ -51,6 +52,7 @@
                 android:layout_marginRight="30dp"
                 android:background="@drawable/ellipsefaux"
                 android:text="@string/faux"
+                android:textAllCaps="false"
                 android:textColor="@color/colorTextButton"/>
 
         </LinearLayout>
