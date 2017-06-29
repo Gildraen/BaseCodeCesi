@@ -93,7 +93,11 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
     }
 
 
-    public void startGameWithTest() {
+    public void startGameWithTest(Boolean b) {
+        if (b == false) {
+
+
+        }
         loadNextWord();
 
         if (_current_word == null) {

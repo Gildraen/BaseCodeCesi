@@ -40,9 +40,10 @@ public class TestMotFragment extends Fragment implements IPopableFragment {
     @BindView(R.id.passe)
     Button _passe;
 
+
     @OnClick(R.id.passe)
     void getPassed() {
-        ((OrthographeActivity) getActivity()).startGameWithTest();
+        ((OrthographeActivity) getActivity()).startGameWithTest(true);
     }
 
     @OnClick(R.id.correct)

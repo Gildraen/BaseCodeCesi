@@ -12,14 +12,6 @@ import fr.cesi.base.controllers.fragment.IPopableFragment;
 import fr.cesi.basecode.R;
 
 public class CorrectionMotFragment extends Fragment implements IPopableFragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public CorrectionMotFragment() {
         // Required empty public constructor
