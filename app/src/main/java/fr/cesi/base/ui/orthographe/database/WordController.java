@@ -38,13 +38,72 @@ public class WordController extends AbstractModelController<Word> {
         if(all == null || all.size() == 0) {
             Theme[] themes = new Theme[]{ Theme.Famille, Theme.Animaux, Theme.CorpsHumain, Theme.Couleurs, Theme.Maison};
 
-            for (Theme theme :
-                    themes) {
-                for (int i = 0; i < 10; i++) {
-                    createTempo(theme, "correct"+i, "korrect"+i, "korrect"+i, "korect"+i);
-                }
-            }
-            //createTempo(Theme.Famille, "correct", "korrect1", "korrect2", "korect3");
+           // for (Theme theme :
+            //        themes) {
+              //  for (int i = 0; i < 10; i++) {
+                //    createTempo(theme, "correct"+i, "korrect"+i, "korrect"+i, "korect"+i);
+                //}
+           // }
+            createTempo(Theme.Famille, "correct", "korrect1", "korrect2", "korect3");
+            createTempo(Theme.Animaux, "correct", "korrect1", "korrect2", "korect3");
+            createTempo(Theme.CorpsHumain, "correct", "korrect1", "korrect2", "korect3");
+            createTempo(Theme.Couleurs, "correct", "korrect1", "korrect2", "korect3");
+            createTempo(Theme.Maison, "correct", "korrect1", "korrect2", "korect3");
+
+            createTempo(Theme.Maison, "Chambre", "Chanbre", "Chambrre", "Chanbre");
+            createTempo(Theme.Maison, "Cuisine", "Cuizine", "Cousine", "Cuizin");
+            createTempo(Theme.Maison, "Salon", "Sallon", "Salong", "Calon");
+            createTempo(Theme.Maison, "Lit", "Lie", "Lis", "Lir");
+            createTempo(Theme.Maison, "Télévision", "Télévizion", "Télévission", "Télevision");
+            createTempo(Theme.Maison, "Table", "Tabble", "Tablet", "Tablee");
+            createTempo(Theme.Maison, "Fauteuil", "Foteuil", "Fauteuille", "Fauteille");
+            createTempo(Theme.Maison, "Salle de bain", "Salle deux bain", "Sale de bain", "Salle de bin");
+            createTempo(Theme.Maison, "Douche", "Douchee", "Doushe", "Duche");
+            createTempo(Theme.Maison, "Chaise", "Cheze", "Chèse", "Chêse");
+
+            createTempo(Theme.Famille, "Père", "Paire", "Pêreu", "Pere");
+            createTempo(Theme.Famille, "Mère", "Mere", "Maire", "Mére");
+            createTempo(Theme.Famille, "Soeur", "Seur", "Sore", "Soeure");
+            createTempo(Theme.Famille, "Frère", "Frere", "Frêre", "Frèrre");
+            createTempo(Theme.Famille, "Grand-mère", "Gran-mère", "Grant-mère", "Grand-maire");
+            createTempo(Theme.Famille, "Grand-père", "Gran-père", "Grant-père", "Grand-paire");
+            createTempo(Theme.Famille, "Tante", "Tente", "Tainte", "Tinte");
+            createTempo(Theme.Famille, "Oncle", "Onccle", "Onqule", "Onkle");
+            createTempo(Theme.Famille, "Fille", "File", "Fiille", "Filleu");
+            createTempo(Theme.Famille, "Fils", "Filse", "Fise", "Filce");
+
+            createTempo(Theme.CorpsHumain, "Nez", "Né", "Net", "Nés");
+            createTempo(Theme.CorpsHumain, "Main", "Min", "Maint", "Mauin ");
+            createTempo(Theme.CorpsHumain, "Tête", "Tète", "Teteu", "Têtte");
+            createTempo(Theme.CorpsHumain, "Jambe", "Janbe", "Jembe", "Gambe");
+            createTempo(Theme.CorpsHumain, "Bras", "Bra", "Brat", "Braz");
+            createTempo(Theme.CorpsHumain, "Doigt", "Doit", "Doitg", "Doig");
+            createTempo(Theme.CorpsHumain, "Oreille", "Orêille", "Orreille", "Oreille");
+            createTempo(Theme.CorpsHumain, "Genou", "Jenou", "Gennou", "Geunou");
+            createTempo(Theme.CorpsHumain, "Coude", "Coudde", "Koude", "Coudee");
+            createTempo(Theme.CorpsHumain, "Oeil", "Oil", "Oel", "Oils");
+
+            createTempo(Theme.Couleurs, "Vert", "Verre", "Vers", "Ver");
+            createTempo(Theme.Couleurs, "Rouge", "Rouge", "Rougee", "Rouje");
+            createTempo(Theme.Couleurs, "Mauve", "Move", "Mouve", "Mauvee");
+            createTempo(Theme.Couleurs, "Jaune", "Jone", "Gone", "Jaunne");
+            createTempo(Theme.Couleurs, "Violet", "Voilet", "Violét", "Viaulet");
+            createTempo(Theme.Couleurs, "Blanc", "Blen", "Blan", "Blant");
+            createTempo(Theme.Couleurs, "Bleu", "Ble", "Bleuh", "Bleux");
+            createTempo(Theme.Couleurs, "Orange", "Orrange", "Orenge", "Oranje");
+            createTempo(Theme.Couleurs, "Rose", "Rause", "Roze", "Rosse");
+            createTempo(Theme.Couleurs, "Gris", "Gri", "Guris", "Grie");
+
+            createTempo(Theme.Animaux, "Chien", "Shien", "Chiun", "Chihen");
+            createTempo(Theme.Animaux, "Chat", "Shat", "Cha", "Chas");
+            createTempo(Theme.Animaux, "Hamster", "Hamester", "Amster", "Hamstère");
+            createTempo(Theme.Animaux, "Oiseau", "Ouaseau", "Oizeau", "Oisot");
+            createTempo(Theme.Animaux, "Chèvre", "Chevre", "Chêvre", "Shèvre");
+            createTempo(Theme.Animaux, "Vache", "Vache", "Vahce", "Vâche");
+            createTempo(Theme.Animaux, "Cochon", "Cochonn", "Kochon", "Cochun");
+            createTempo(Theme.Animaux, "Tortue", "Tortu", "Torttue", "Tortuee");
+            createTempo(Theme.Animaux, "Poisson", "Poison", "Pouasson", "Poissont");
+            createTempo(Theme.Animaux, "Furet", "Furé", "Furêt", "Furët");
         }
     }
 
