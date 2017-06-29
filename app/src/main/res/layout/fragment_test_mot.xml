@@ -8,7 +8,7 @@
     tools:context="fr.cesi.base.ui.orthographe.TestMotFragment">
 
     <LinearLayout
-        android:layout_width="200dp"
+        android:layout_width="@dimen/middle_page_width"
         android:layout_height="match_parent"
         android:layout_marginTop="80dp"
         android:gravity="center_vertical"
@@ -19,63 +19,63 @@
             android:id="@+id/theme"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:gravity="center"
-            android:paddingTop="5dp"
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
+            android:gravity="center"
+            android:paddingTop="5dp"
             android:textColor="@color/colorTextButton"
             android:textSize="@dimen/textsize"
-            tools:text="Mot à corriger"/>
+            tools:text="Mot à corriger" />
 
         <TextView
             android:id="@+id/testword"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginBottom="@dimen/default_margin_button"
+            android:background="@drawable/etiquettelarge"
             android:gravity="center"
             android:paddingTop="10dp"
-            android:layout_marginBottom="@dimen/default_margin_button"
             android:textColor="@color/colorTextButton"
-            android:textSize="@dimen/textsize"
-            android:background="@drawable/etiquettelarge" />
+            android:textSize="@dimen/textsize" />
 
         <TextView
             android:id="@+id/messerror1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="@string/messageerreur1"
-            android:textColor="@color/text_error"
             android:textAlignment="center"
-            android:visibility="invisible"/>
+            android:textColor="@color/text_error"
+            android:visibility="invisible" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="30dp">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="30dp">
 
 
             <Button
                 android:id="@+id/correct"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="30dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/ellipsevrai"
                 android:text="@string/vrai"
                 android:textAllCaps="false"
-                android:textSize="@dimen/textsizebtn"
-                android:textColor="@color/colorTextButton"/>
+                android:textColor="@color/colorTextButton"
+                android:textSize="@dimen/textsizebtn" />
 
             <Button
                 android:id="@+id/incorrect"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginRight="30dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="30dp"
                 android:background="@drawable/ellipsefaux"
                 android:text="@string/faux"
                 android:textAllCaps="false"
-                android:textSize="@dimen/textsizebtn"
-                android:textColor="@color/colorTextButton"/>
+                android:textColor="@color/colorTextButton"
+                android:textSize="@dimen/textsizebtn" />
 
         </LinearLayout>
 
@@ -87,9 +87,9 @@
             android:layout_marginBottom="@dimen/default_margin_button"
             android:background="@drawable/etiquette"
             android:text="@string/ignorer"
-            android:textSize="@dimen/textsize"
             android:textAllCaps="false"
-            android:textColor="@color/colorTextButton" />
+            android:textColor="@color/colorTextButton"
+            android:textSize="@dimen/textsize" />
 
     </LinearLayout>
 
