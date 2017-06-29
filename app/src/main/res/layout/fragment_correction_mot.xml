@@ -23,6 +23,15 @@
             android:gravity="center"
             android:text="@string/WordToCorrect" />
 
+        <TextView
+            android:id="@+id/messerror2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/messageerreur2"
+            android:textColor="@color/text_error"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+
 
         <EditText
             android:layout_width="match_parent"
