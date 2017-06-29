@@ -16,7 +16,7 @@
 
 
         <TextView
-            android:id="@+id/word"
+            android:id="@+id/wordtocorrect"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"

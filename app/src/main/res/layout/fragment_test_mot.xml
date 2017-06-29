@@ -25,7 +25,7 @@
             android:paddingTop="5dp"
             android:textColor="@color/colorTextButton"
             android:textSize="@dimen/textsize"
-            tools:text="Mot à corriger" />
+            tools:text="Famille"/>
 
         <TextView
             android:id="@+id/testword"

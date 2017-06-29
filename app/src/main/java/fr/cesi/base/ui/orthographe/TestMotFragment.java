@@ -40,42 +40,44 @@ public class TestMotFragment extends Fragment implements IPopableFragment {
     @BindView(R.id.passe)
     Button _passe;
 
+    @BindView(R.id.messerror1)
+    TextView _messerror1;
 
     @OnClick(R.id.passe)
     void getPassed() {
-        ((OrthographeActivity) getActivity()).startGameWithTest(true);
+        ((OrthographeActivity) getActivity()).startGameWithTest(false);
     }
 
     @OnClick(R.id.correct)
     void getLinkCorrect() {
 
-        if (isWordCorrect()){
-            ((OrthographeActivity) getActivity()).startGameWithTest(true);
-        }
-        else {
-            ((OrthographeActivity) getActivity()).showCorrectionWord(false);
+        if (isWordCorrect()) {
+            ((OrthographeActivity) getActivity()).startGameWithTest(false);
+
+        } else {
+            ((OrthographeActivity) getActivity()).showCorrectionWord();
         }
     }
 
     @OnClick(R.id.incorrect)
     void getLinkIncorrect() {
-        if (isWordCorrect()){
-            ((OrthographeActivity) getActivity()).startGameWithTest(false);
-        }
-        else {
-            ((OrthographeActivity) getActivity()).showCorrectionWord(true);
+        if (isWordCorrect()) {
+            ((OrthographeActivity) getActivity()).startGameWithTest(true);
+
+        } else {
+            ((OrthographeActivity) getActivity()).showCorrectionWord();
         }
     }
 
     public TestMotFragment() {
         // Required empty public constructor
     }
-    public static TestMotFragment newInstance() {
+
+    public static TestMotFragment newInstance(boolean was_wrong_answer) {
         TestMotFragment fragment = new TestMotFragment();
-        return fragment;
-    }
-    public static TestMotFragment newInstance(Theme theme) {
-        TestMotFragment fragment = new TestMotFragment();
+        Bundle bundle = new Bundle();
+        bundle.putBoolean("was_wrong_answer", was_wrong_answer);
+        fragment.setArguments(bundle);
         return fragment;
     }
 
@@ -87,7 +89,6 @@ public class TestMotFragment extends Fragment implements IPopableFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
 
 
         // Inflate the layout for this fragment
@@ -110,14 +111,21 @@ public class TestMotFragment extends Fragment implements IPopableFragment {
 
         _theme.setText(activity.getCurrentTheme().toString());
         _testword.setText(current_word_chosen);
+
+        boolean was_wrong_answer = getArguments() != null ? getArguments().getBoolean("was_wrong_answer", false) : false;
+
+        if(was_wrong_answer) {
+            _messerror1.setVisibility(View.VISIBLE);
+        } else {
+            _messerror1.setVisibility(View.GONE);
+        }
     }
 
-    public boolean isWordCorrect(){
+    public boolean isWordCorrect() {
         OrthographeActivity activity = (OrthographeActivity) getActivity();
-        if ( activity.getCurrentWordChosen() == activity.getCurrentWord().correct) {
+        if (activity.getCurrentWordChosen() == activity.getCurrentWord().correct) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }

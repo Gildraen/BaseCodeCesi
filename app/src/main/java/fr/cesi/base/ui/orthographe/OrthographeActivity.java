@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -35,6 +36,9 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
     LinearLayout _main_content;
     private List<Word> _currentListToLoad;
     private String _current_word_chosen;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,10 +83,11 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
         _currenttheme = theme;
         _currentListToLoad = WordController.getInstance().listFromTheme(_currenttheme);
 
-        startGameWithTest(true);
+        startGameWithTest(false);
     }
 
-    public void showCorrectionWord(boolean b) {
+    public void showCorrectionWord() {
+
         CorrectionMotFragment fragment = CorrectionMotFragment.newInstance();
         getStackController().push(fragment);
     }
@@ -93,11 +98,7 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
     }
 
 
-    public void startGameWithTest(Boolean b) {
-        if (b == false) {
-
-
-        }
+    public void startGameWithTest(boolean was_wrong_answer) {
         loadNextWord();
 
         if (_current_word == null) {
@@ -105,20 +106,7 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
             showMainMenu();
         } else {
             //show test
-            getStackController().push(TestMotFragment.newInstance());
-            Log.d(TAG, "showFamilyFragment: list_to_load size := " + _currentListToLoad.size() + " for " + _currenttheme);
-        }
-    }
-
-    public void startGameWithTest(boolean b) {
-        loadNextWord();
-
-        if (_current_word == null) {
-            //fini
-            showMainMenu();
-        } else {
-            //show test
-            getStackController().push(TestMotFragment.newInstance());
+            getStackController().push(TestMotFragment.newInstance(was_wrong_answer));
             Log.d(TAG, "showFamilyFragment: list_to_load size := " + _currentListToLoad.size() + " for " + _currenttheme);
         }
     }
@@ -134,6 +122,7 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
         }
     }
 
+
     public Word getCurrentWord() {
         return _current_word;
     }
@@ -141,4 +130,6 @@ public class OrthographeActivity extends AbstractPopableActivity implements IAct
     public String getCurrentWordChosen() {
         return _current_word_chosen;
     }
+
+
 }

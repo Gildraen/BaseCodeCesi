@@ -38,18 +38,6 @@ public class WordController extends AbstractModelController<Word> {
         if(all == null || all.size() == 0) {
             Theme[] themes = new Theme[]{ Theme.Famille, Theme.Animaux, Theme.CorpsHumain, Theme.Couleurs, Theme.Maison};
 
-           // for (Theme theme :
-            //        themes) {
-              //  for (int i = 0; i < 10; i++) {
-                //    createTempo(theme, "correct"+i, "korrect"+i, "korrect"+i, "korect"+i);
-                //}
-           // }
-            createTempo(Theme.Famille, "correct", "korrect1", "korrect2", "korect3");
-            createTempo(Theme.Animaux, "correct", "korrect1", "korrect2", "korect3");
-            createTempo(Theme.CorpsHumain, "correct", "korrect1", "korrect2", "korect3");
-            createTempo(Theme.Couleurs, "correct", "korrect1", "korrect2", "korect3");
-            createTempo(Theme.Maison, "correct", "korrect1", "korrect2", "korect3");
-
             createTempo(Theme.Maison, "Chambre", "Chanbre", "Chambrre", "Chanbre");
             createTempo(Theme.Maison, "Cuisine", "Cuizine", "Cousine", "Cuizin");
             createTempo(Theme.Maison, "Salon", "Sallon", "Salong", "Calon");
