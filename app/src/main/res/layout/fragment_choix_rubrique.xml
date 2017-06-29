@@ -16,7 +16,7 @@
         android:textSize="45dp" />
 
     <LinearLayout
-        android:layout_width="200dp"
+        android:layout_width="@dimen/middle_page_width"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -86,6 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:text="@string/corpshumain"
                 android:textColor="@color/colorTextButton"
                 android:textSize="@dimen/textsize" />
@@ -110,6 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/couleurs"
+                android:gravity="center"
                 android:textColor="@color/colorTextButton"
                 android:textSize="@dimen/textsize" />
         </FrameLayout>
