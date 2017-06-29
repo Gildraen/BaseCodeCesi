@@ -19,7 +19,7 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file("C:\\Users\\Gildraen\\android\\cesi.jks")
+            storeFile file("../cesi.jks")
             storePassword "cesiortho"
             keyAlias "au_pays_des_mots"
             keyPassword "orthographe"
