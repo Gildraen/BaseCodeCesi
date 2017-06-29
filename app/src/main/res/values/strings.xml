@@ -15,6 +15,6 @@
     <string name="vrai">Vrai</string>
     <string name="faux">Faux</string>
     <string name="messageerreur1">Désolé, le mot était bien orthographié !</string>
-    <string name="messageerreur2">Désolé, le mot est mal orthographié. Peux-tu le réécrire ci-dessous :</string>
+    <string name="messageerreur2">Désolé, le mot est mal orthographié ou il manque peut-être la majuscule. Peux-tu le réécrire ci-dessous :</string>
     <string name="validation">Je valide</string>
 </resources>
