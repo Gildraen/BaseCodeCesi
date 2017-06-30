@@ -9,7 +9,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "fr.cesi.au_pays_des_mots"
+        applicationId "fr.cesi.android.orthographe"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
